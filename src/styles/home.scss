@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+
+.swtitle1 {
+    color: #feda4a;
+    font-family: 'Poller One', cursive;
+}
+
+.swtitle2 {
+    color: #feda4a;
+    float: left;
+    font-family: 'Poller One', cursive;
+}
+.swbgdark {
+    background-image: url("https://images.pond5.com/star-wars-abstract-leap-hyperspace-footage-130046156_iconl.jpeg");
+}
+.charplanet {
+    height: 220px;
+}
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+div.scrollmenu .card {
+    width: 250px;
+    height: 400px;
+  display: inline-block;
+  padding: 14px;
+  margin: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu div:hover {
+  background-color: #feda4a;
+}
+
+        
