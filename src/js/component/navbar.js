@@ -8,7 +8,6 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-dark">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">StarWars Blog</span>
 				<img className="imgswlogo" src={swlogo} alt="StarWarsLogo" />
 			</Link>
 			<div className="ml-auto">

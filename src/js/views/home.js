@@ -1,5 +1,6 @@
 import React from "react";
-//import MiCard from "../component/Card.js";
+import { PersonCard } from "../component/Card";
+import { PlanetCard } from "../component/Card";
 import "../../styles/home.scss";
 
 export const Home = () => (
@@ -12,7 +13,13 @@ export const Home = () => (
 				<h2 className="swtitle2">Characters</h2>
 			</div>
 			<div className="scrollmenu">
-				<div className="card">
+				<PersonCard />
+				<PersonCard />
+				<PersonCard />
+				<PersonCard />
+				<PersonCard />
+				<PersonCard />
+				{/* <div className="card">
 					<img
 						className="card-img-top charplanet"
 						src="https://webstockreview.net/images/darth-vader-clipart-logo-4.jpg"
@@ -28,13 +35,19 @@ export const Home = () => (
 							<i className="far fa-heart" />
 						</a>
 					</div>
-				</div>
+				</div> */}
 			</div>
 			<div className="row">
 				<h2 className="swtitle2">Planets</h2>
 			</div>
 			<div className="scrollmenu">
-				<div className="card">
+				<PlanetCard />
+				<PlanetCard />
+				<PlanetCard />
+				<PlanetCard />
+				<PlanetCard />
+				<PlanetCard />
+				{/* <div className="card">
 					<img
 						className="card-img-top charplanet"
 						src="https://pbs.twimg.com/profile_images/946790797034344448/wsg_T21V.jpg"
@@ -50,7 +63,7 @@ export const Home = () => (
 							<i className="far fa-heart" />
 						</a>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	</div>

@@ -1,15 +1,44 @@
 import React from "react";
-export const MiCard = () => {
+export const PersonCard = () => {
 	return (
-		<div className="card text-center">
-			<img src="http://placehold.it/500x325.jpg" className="card-img-top" alt="Your Img here!" />
+		<div className="card">
+			<img
+				className="card-img-top charplanet"
+				src="https://webstockreview.net/images/darth-vader-clipart-logo-4.jpg"
+				alt="Card image cap"
+			/>
 			<div className="card-body">
-				<h5 className="card-title">Card title</h5>
-				<p className="card-text">
-					Some quick example text to build on the card title and make up the bulk of the card's content.
-				</p>
-				<a href="#" className="btn btn-primary">
-					Find Out More!
+				<h5 className="card-title">Character No.XX</h5>
+				<p className="card-text">Gender: XXXX</p>
+				<p className="card-text">Hair color: XXXX</p>
+				<p className="card-text">Eye color: XXXX</p>
+				<a href="#" className="btn btn-light text-primary border border-primary rounded float-left">
+					Learn more!
+				</a>
+				<a href="#" className="btn btn-light text-warning border border-warning float-right">
+					<i className="far fa-heart" />
+				</a>
+			</div>
+		</div>
+	);
+};
+export const PlanetCard = () => {
+	return (
+		<div className="card">
+			<img
+				className="card-img-top charplanet"
+				src="https://pbs.twimg.com/profile_images/946790797034344448/wsg_T21V.jpg"
+				alt="Card image cap"
+			/>
+			<div className="card-body">
+				<h5 className="card-title">Planet No.XX</h5>
+				<p className="card-text">Population: XXXX</p>
+				<p className="card-text">Terrain: XXXX</p>
+				<a href="#" className="btn btn-light text-primary border border-primary rounded float-left">
+					Learn more!
+				</a>
+				<a href="#" className="btn btn-light text-warning border border-warning float-right">
+					<i className="far fa-heart" />
 				</a>
 			</div>
 		</div>
