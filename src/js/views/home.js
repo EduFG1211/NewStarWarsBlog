@@ -1,70 +1,45 @@
-import React from "react";
-import { PersonCard } from "../component/Card";
-import { PlanetCard } from "../component/Card";
+import React, { useState, useEffect, useContext } from "react";
+import { PersonCard, PlanetCard } from "../component/card";
 import "../../styles/home.scss";
+import { Context } from "../store/appContext";
+import { useParams } from "react-router-dom";
 
-export const Home = () => (
-	<div className="text-center swbgdark">
-		<div>
-			<h1 className="swtitle1">In a website far far away...</h1>
-		</div>
-		<div className="container-fluid">
-			<div className="row">
-				<h2 className="swtitle2">Characters</h2>
+export const Home = () => {
+	const { store, actions } = useContext(Context);
+	const [cargo, setCargo] = useState(false);
+
+	setInterval(() => {
+		store.characters.length > 0 ? setCargo(true) : "";
+	}, 2000);
+
+	return (
+		<div className="text-center swbgdark">
+			<div>
+				<h1 className="swtitle1">In a website far far away...</h1>
 			</div>
-			<div className="scrollmenu">
-				<PersonCard />
-				<PersonCard />
-				<PersonCard />
-				<PersonCard />
-				<PersonCard />
-				<PersonCard />
-				{/* <div className="card">
-					<img
-						className="card-img-top charplanet"
-						src="https://webstockreview.net/images/darth-vader-clipart-logo-4.jpg"
-						alt="Card image cap"
-					/>
-					<div className="card-body">
-						<h5 className="card-title">Character No.XX</h5>
-						<p className="card-text">XXXXXXX</p>
-						<a href="#" className="btn btn-light text-primary border border-primary rounded float-left">
-							Learn more!
-						</a>
-						<a href="#" className="btn btn-light text-warning border border-warning float-right">
-							<i className="far fa-heart" />
-						</a>
-					</div>
-				</div> */}
-			</div>
-			<div className="row">
-				<h2 className="swtitle2">Planets</h2>
-			</div>
-			<div className="scrollmenu">
-				<PlanetCard />
-				<PlanetCard />
-				<PlanetCard />
-				<PlanetCard />
-				<PlanetCard />
-				<PlanetCard />
-				{/* <div className="card">
-					<img
-						className="card-img-top charplanet"
-						src="https://pbs.twimg.com/profile_images/946790797034344448/wsg_T21V.jpg"
-						alt="Card image cap"
-					/>
-					<div className="card-body">
-						<h5 className="card-title">Planet No.XX</h5>
-						<p className="card-text">XXXXXXX</p>
-						<a href="#" className="btn btn-light text-primary border border-primary rounded float-left">
-							Learn more!
-						</a>
-						<a href="#" className="btn btn-light text-warning border border-warning float-right">
-							<i className="far fa-heart" />
-						</a>
-					</div>
-				</div> */}
+			<div className="container-fluid">
+				<div className="row">
+					<h2 className="swtitle2">Characters</h2>
+				</div>
+				<div className="scrollmenu">
+					{cargo
+						? store.characters.map((item, index) => {
+								return (
+									<div key={index}>
+										<PersonCard name="gfgfgfg" />
+									</div>
+								);
+						  })
+						: ""}
+					<PersonCard name="{store.characters[2].name}" />
+				</div>
+				<div className="row">
+					<h2 className="swtitle2">Planets</h2>
+				</div>
+				<div className="scrollmenu">
+					<PlanetCard />
+				</div>
 			</div>
 		</div>
-	</div>
-);
+	);
+};
