@@ -16,21 +16,21 @@
 .charplanet {
     height: 220px;
 }
-div.scrollmenu {
+.scrollmenu {
   overflow: auto;
   white-space: nowrap;
 }
-div.scrollmenu .card {
+.scroll {
     width: 300px;
     height: 475px;
   display: inline-block;
-  padding: 14px;
+  padding: 0;
   margin: 14px;
   text-decoration: none;
 }
 
-div.scrollmenu div:hover {
-  background-color: #feda4a;
-}
+// div.scrollmenu div:hover {
+//   background-color: #feda4a;
+// }
 
         
