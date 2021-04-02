@@ -9,16 +9,12 @@ export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-dark">
-			<Link to="/">
+			<Link to="/home">
 				<img className="imgswlogo" src={swlogo} alt="StarWarsLogo" />
 			</Link>
-			{/* <div className="ml-auto">
-				<DropdownButton id="dropdown-basic-button" title="Favorites">
-					<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-					<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-					<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-				</DropdownButton>
-			</div> */}
+			<Link to="/" className="btn rounded button-logout">
+				Log out
+			</Link>
 			<ButtonGroup aria-label="Basic example">
 				<DropdownButton id="dropdown-basic-button" title={"Favorites"} className="m-1">
 					{store.favlist.length > 0 ? (

@@ -9,3 +9,15 @@ nav {
     background-color: #feda4a;
     color: black;
 }
+.button-logout {
+    background-color: #feda4a;
+    color: black;
+    font-family: 'Poller One', cursive;
+    border-color: rgba(255, 0, 0, 0.753);
+}
+
+.button-logout:hover {
+    background-color: rgba(255, 0, 0, 0.753);
+    color: #feda4a;
+    border-color: black;
+}

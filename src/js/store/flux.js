@@ -7,35 +7,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			fetchCharacter() {
-				fetch("https://www.swapi.tech/api/people/")
+				fetch("https://3000-brown-anaconda-37b86dzb.ws-us03.gitpod.io/characters/")
 					.then(response => response.json())
-					.then(result => {
-						let list = [];
-						result.results.forEach(element => {
-							fetch(element.url)
-								.then(response => response.json())
-								.then(result2 => list.push(result2.result.properties))
-								.catch(error => console.log("error", error));
-						});
-						setStore({ characters: list });
-					})
+
+					.then(result => setStore({ characters: result }))
+
 					.catch(error => console.log("error", error));
 			},
 
 			fetchPlanets() {
-				fetch("https://www.swapi.tech/api/planets/")
+				fetch("https://3000-brown-anaconda-37b86dzb.ws-us03.gitpod.io/planets/")
 					.then(response => response.json())
-					.then(result => {
-						let list2 = [];
-						result.results.forEach(element => {
-							fetch(element.url)
-								.then(response => response.json())
-								.then(result2 => list2.push(result2.result.properties))
-								.catch(error => console.log("error", error));
-						});
 
-						setStore({ planets: list2 });
-					})
+					.then(result => setStore({ planets: result }))
+
 					.catch(error => console.log("error", error));
 			},
 
