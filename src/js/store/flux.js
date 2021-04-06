@@ -97,11 +97,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						newlist.push(item);
 					}
 				});
-				// console.log(newlist);
-				// console.log(index);
-				// console.log(store.favlist[index]);
-				//setStore({ favlist: newlist });
-
 				let myToken = sessionStorage.getItem("my_token");
 				const body = {
 					name: store.favlist[index]
