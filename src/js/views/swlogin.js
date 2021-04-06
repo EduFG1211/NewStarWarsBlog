@@ -56,7 +56,7 @@ export const Swlogin = () => {
 					</div>
 					<div className="mb-3">
 						<label htmlFor="exampleInputPassword1" className="form-label">
-							Password
+							Password-saber
 						</label>
 						<input
 							type="password"

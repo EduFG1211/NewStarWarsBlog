@@ -11,6 +11,7 @@ export const Swsignup = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
+		console.log(auth);
 
 		const body = {
 			email: email,
@@ -30,6 +31,7 @@ export const Swsignup = () => {
 				setAuth(true);
 			})
 			.catch(error => console.log(error));
+		console.log(auth);
 	};
 
 	return (
@@ -44,7 +46,7 @@ export const Swsignup = () => {
 							className="form-control text-center"
 							aria-describedby="emailHelp"
 							placeholder="eg: daddyvader@starwars.com"
-							value={email}
+							//value={email}
 							onChange={event => setEmail(event.target.value)}
 						/>
 						<div id="emailTip" className="form-text">
@@ -59,7 +61,7 @@ export const Swsignup = () => {
 							type="password"
 							className="form-control text-center"
 							placeholder="eg: imnotyourfather"
-							value={password}
+							//value={password}
 							onChange={event => setPassword(event.target.value)}
 						/>
 					</div>
@@ -68,6 +70,7 @@ export const Swsignup = () => {
 					</button>
 				</form>
 				{auth ? <Redirect to="/login" /> : null}
+				{/* {auth ? <Redirect to="/login" /> : <Redirect to="/signup" />} */}
 			</div>
 		</div>
 	);
