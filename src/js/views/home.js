@@ -14,8 +14,10 @@ export const Home = () => {
 		store.characters.length > 0 ? setCargo(true) : "";
 		store.planets.length > 0 ? setCargo2(true) : "";
 	}, 2000);
-	//console.log(store.characters);
-	//console.log(sessionStorage.getItem("my_token"));
+
+	useEffect(() => {
+		actions.fetchUserFavorites();
+	}, []);
 
 	return (
 		<div className="text-center swbgdark">
