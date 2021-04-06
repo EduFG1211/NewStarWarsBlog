@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import swlogo from "../../img/starwarslogo.png";
 import "../../styles/navbar.scss";
@@ -7,6 +7,13 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+
+	// const [cargo3, setCargo3] = useState(false);
+
+	// setInterval(() => {
+	// 	store.favlist.length > 0 ? setCargo3(true) : "";
+	// }, 2000);
+
 	return (
 		<nav className="navbar navbar-dark">
 			<Link to="/home">

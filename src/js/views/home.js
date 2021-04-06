@@ -15,6 +15,7 @@ export const Home = () => {
 		store.planets.length > 0 ? setCargo2(true) : "";
 	}, 2000);
 	//console.log(store.characters);
+	//console.log(sessionStorage.getItem("my_token"));
 
 	return (
 		<div className="text-center swbgdark">
